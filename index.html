@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman!</title>
+    <link rel="icon" type="image/icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="assets/css/hangman.css" />
+    <script defer src="assets/js/hangman.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hangman!</h1>
+      <p class="rules">
+        주제를 보고 알파벳을 선택하여 단어를 추측해 보세요.<br />
+        틀린 알파벳을 선택하면 행맨이 그려집니다.<br />
+        행맨이 완성되면 당신은 지게 됩니다.<br />
+        총 10번의 기회만으로 단어를 완성해 보세요!
+      </p>
+
+      <p class="topic"></p>
+      <div class="buttons"></div>
+      <p class="word"></p>
+      <p class="lives"></p>
+
+      <canvas id="canvas">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+
+      <div class="btn-wrap">
+        <button type="button" class="btn hint">힌트</button>
+        <button type="button" class="btn reset">다시하기</button>
+      </div>
+    </div>
+
+    <div class="modal-backdrop"></div>
+    <div class="modal-wrap">
+      <div class="modal-text"></div>
+      <button type="button" class="modal-close">닫기</button>
+    </div>
+  </body>
+</html>

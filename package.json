@@ -1,0 +1,29 @@
+{
+  "name": "hangman-game",
+  "version": "1.0.0",
+  "description": "Javascript Toy Project - Hangman Game",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/gulp/bin/gulp.js",
+    "start": "cross-env NODE_ENV='development' gulp && gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mak-somniferum/HangmanGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/mak-somniferum/HangmanGame#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "cross-env": "^6.0.3",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}
