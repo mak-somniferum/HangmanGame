@@ -71,48 +71,30 @@ function draw(pathFromx, pathFromy, pathTox, pathToy) {
   context.stroke();
 }
 
-frame1 = function () {
-  draw(0, 130, 300, 130);
-};
+const frame1 = () => draw(0, 130, 300, 130);
 
-frame2 = function () {
-  draw(80, 10, 80, 129);
-};
+const frame2 = () => draw(80, 10, 80, 129);
 
-frame3 = function () {
-  draw(80, 10, 150, 10);
-};
+const frame3 = () => draw(80, 10, 150, 10);
 
-frame4 = function () {
-  draw(150, 10, 150, 20);
-};
+const frame4 = () => draw(150, 10, 150, 20);
 
-head = function () {
+const head = () => {
   const context = canvas.getContext("2d");
   context.beginPath();
   context.arc(150, 35, 15, 0, Math.PI * 2);
   context.stroke();
 };
 
-torso = function () {
-  draw(150, 50, 150, 85);
-};
+const torso = () => draw(150, 50, 150, 85);
 
-leftArm = function () {
-  draw(150, 57, 140, 87);
-};
+const leftArm = () => draw(150, 57, 140, 87);
 
-rightArm = function () {
-  draw(150, 57, 160, 87);
-};
+const rightArm = () => draw(150, 57, 160, 87);
 
-leftLeg = function () {
-  draw(150, 85, 145, 122);
-};
+const leftLeg = () => draw(150, 85, 145, 122);
 
-rightLeg = function () {
-  draw(150, 85, 155, 122);
-};
+const rightLeg = () => draw(150, 85, 155, 122);
 
 drawOrder = [frame1, frame2, frame3, frame4, head, torso, leftArm, rightArm, leftLeg, rightLeg];
 
@@ -164,9 +146,7 @@ function play() {
   const randomData = getRandomData();
   correctCounter = 0;
   lives = 10;
-  topic = randomData.topic;
-  word = randomData.word;
-  hint = randomData.hint;
+  ({ topic, word, hint } = randomData);
 
   topicText.innerHTML = `주제는 ${topic}입니다.`;
   liveText.innerHTML = `남은 목숨 : <strong>${lives}</strong>`;
